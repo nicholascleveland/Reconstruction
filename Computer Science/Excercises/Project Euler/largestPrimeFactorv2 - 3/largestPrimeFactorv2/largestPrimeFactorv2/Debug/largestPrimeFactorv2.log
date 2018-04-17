@@ -1,0 +1,30 @@
+﻿  Source.cpp
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactorv2\largestprimefactorv2\largestprimefactorv2\source.cpp(14): error C2664: 'std::vector<long,std::allocator<_Ty>> findPrimeFactors(long,std::vector<int,std::allocator<int>>)': cannot convert argument 2 from 'std::vector<long,std::allocator<_Ty>>' to 'std::vector<int,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=long
+          ]
+          and
+          [
+              _Ty=long
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactorv2\largestprimefactorv2\largestprimefactorv2\source.cpp(14): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactorv2\largestprimefactorv2\largestprimefactorv2\source.cpp(15): error C2664: 'long findLargestPrimeNumber(std::vector<int,std::allocator<_Ty>>)': cannot convert argument 1 from 'std::vector<long,std::allocator<_Ty>>' to 'std::vector<int,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty=long
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactorv2\largestprimefactorv2\largestprimefactorv2\source.cpp(15): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactorv2\largestprimefactorv2\largestprimefactorv2\source.cpp(54): warning C4018: '<': signed/unsigned mismatch

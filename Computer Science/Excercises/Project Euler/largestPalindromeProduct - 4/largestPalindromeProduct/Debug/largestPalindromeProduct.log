@@ -1,0 +1,5 @@
+﻿  Source.cpp
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestpalindromeproduct\largestpalindromeproduct\source.cpp(67): warning C4018: '<': signed/unsigned mismatch
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestpalindromeproduct\largestpalindromeproduct\source.cpp(83): warning C4018: '<': signed/unsigned mismatch
+  largestPalindromeProduct.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\largestPalindromeProduct\Debug\largestPalindromeProduct.exe
+  largestPalindromeProduct.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\largestPalindromeProduct\Debug\largestPalindromeProduct.pdb (Partial PDB)

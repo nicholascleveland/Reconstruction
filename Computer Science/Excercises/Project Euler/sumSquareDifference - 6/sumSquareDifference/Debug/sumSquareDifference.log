@@ -1,0 +1,5 @@
+﻿  Source.cpp
+d:\development\programming projects\fundamentals\exercises\projecteuler\sumsquaredifference\sumsquaredifference\source.cpp(40): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\development\programming projects\fundamentals\exercises\projecteuler\sumsquaredifference\sumsquaredifference\source.cpp(53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  sumSquareDifference.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\sumSquareDifference\Debug\sumSquareDifference.exe
+  sumSquareDifference.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\sumSquareDifference\Debug\sumSquareDifference.pdb (Partial PDB)

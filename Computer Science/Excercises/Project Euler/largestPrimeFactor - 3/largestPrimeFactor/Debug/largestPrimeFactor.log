@@ -1,0 +1,6 @@
+﻿  Source.cpp
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactor\largestprimefactor\source.cpp(13): warning C4101: 'n': unreferenced local variable
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactor\largestprimefactor\source.cpp(26): warning C4018: '<': signed/unsigned mismatch
+d:\development\programming projects\fundamentals\exercises\projecteuler\largestprimefactor\largestprimefactor\source.cpp(43): warning C4018: '<': signed/unsigned mismatch
+  largestPrimeFactor.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\largestPrimeFactor\Debug\largestPrimeFactor.exe
+  largestPrimeFactor.vcxproj -> D:\Development\Programming Projects\Fundamentals\Exercises\ProjectEuler\largestPrimeFactor\Debug\largestPrimeFactor.pdb (Partial PDB)
