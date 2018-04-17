@@ -1,0 +1,401 @@
+Chapter 3: Functions, sequences and, relations
+1. Functions:
+- A function assigns to each member of a set X exactly one member of a set Y. For example, functions are used to analyze the time needed to execute algorithms.
+- Let X and Y be sets. A function "f" from X to Y is a subset of the Cartesian product of X x Y for x member of X
+and y member of Y with (x,y) member of f.
+Recall the Cartesian product from Chapter 1, sets. Let set X = {1,2,3} and set Y = {a,b}
+The Cartesian product, X x Y = {(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)}
+This definition is simply saying the function "f" is a subset of this X x Y Cartesian product.
+Recall a subset is simply the idea that if every element in a set called A is in a set called B,
+then A must be a subset of B.
+- We denote a function f from X to Y as f: X => Y
+- The set X is called the domain of f and the set of Y is called the co-domain of f.
+Recall the domain  of a function is the set of all inputs. (the function must have defined outputs, so, if you gave your function
+an input value and the result of the function gave you something undefined or bad data, this input cannot be a member/element of your domain set.)
+ex: you may put any real number as input for a function that squares the input, but only real numbers >= 0 for a function that takes the square root of
+the input. (That is if we're dealing with real numbers and not imaginary.... look more into this.) 
+Recall the range of a function is the set of all possible outputs. All of the outputs make up the range.
+ex: going back to the example with a function that only squares the input, the domain is all real numbers, but the range,
+will be the output or f(x) ,if we called the input x, a member of all real numbers such that f(x) >= 0.
+Our output cannot be negative, since we are squaring all the inputs, which gives us a positive (0 inclusive) output every time.
+If we were to graph it, we would notice its the graph of a parabola. All these possible outputs are the range of the function.
+
+
+
+The set {y | (x,y) member of f}
+*****Which is a subset of the co-domain Y and we call the range of f.*****
+
+(Recall, a co-domain is the set of all outputs that may possible come out of a function, vs a range where the range is the set of the outputs
+that actually come out of the function.)
+ANALYZE/WRITE MORE
+****X (the valid input) is the domain. OK. Y (the output) is the co-domain, so Y has all the outputs that a subset of X x Y could have, while
+X x Y has all of them. But we are using f, a subset, therefore the output of f is a range, which is just a portion of the X x Y cartesian product.
+{y | (x,y) member of f}. Each y in this case isn't each member of the co-domain, Y, but rather a member of the subset f. Where the range is all
+the y members that are in a pair with an x that are members of the function.
+
+
+
+
+Example 1: Consider X = {1,2,3} and Y = {a,b,c}
+f = {(1,a), (2,b), (3,c)}
+Diagram:
+1 ===============> a
+2 ===============> b
+3 ===============> c
+
+This is a one to one function as well.
+
+See how f is only a subset of the cardinality of sets X,Y or X x Y?
+
+
+
+Example 2:
+Let's consider X = {1,2,3,4} and Y = {a,b,c}
+f = {(1,a),(2,a),(3,b)}
+1 ==============> a
+2 ==============/^
+3 ============== b
+
+
+Not a function because element 4 is not assigned to anything.
+
+Example 3: Consider X = {1,2,3} and Y = {a,b,c}
+f = {(1,a),(2,b),(3,c),(1,b)}
+
+f is not a function from X = {1,2,3} to Y = {a,b,c} because the element 1 in X is not assigned a unique element in Y.
+(1 is assigned to two different values in Y which are a and b)
+
+More example:
+Defn: For each element x in the domain X, three is exactly one element y in the codomain Y with (x,y) member of f.
+f(x) = y
+Example 1: Let's consider X = {1,2,3} and Y = {a,b,c} and f be the function defined f(x) = y
+f(1) = a
+f(2) = b
+f(3) = c
+
+
+Example:
+Let's consider X = {1,2,3} and Y = {a,b,c} and f be the function defined f(x) = x^2
+f(1) = 1
+f(-2) = 4
+f(0) = 0
+
+Graphing:
+Another way to visualize functions is via a graph
+The graph of a function has it's domain and and co-domain as subsets of the real numbers and is obtained by plotting the points that correspond
+to the elements/members in for.
+Domain is contained in the horizontal axis (x) and the co-domain is contained in the vertical axis (y)
+Look up the graphing of the function f(x)= x^2 as an example.
+
+Modulus:
+Defn: If x is an integer and y is a positive integer, we define x mod y to be the remainder when x is divisible by y.
+Ex.1: 6 % 2 = 0, 5 % 1 = 0, 8 % 12 = 8
+Ex. 2:
+If we have a system that stores and retrieves information,
+Say we must store or retrieve the number n, we might take as a first choice for a location n, n % 11. 
+The function would be: h(n) = n % 11.
+
+15 % 11 = 4, 558 % 11 = 8, 32 % 11 = 10, 132 % 11 = 0, 102 % 11 = 3, 5 % 11 = 5, 257 % 11 = 6
+-----------------------------------------------
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+----------------------------------------------
+|132|   |   |102| 15| 5 |257|   |558|   |  32|
+----------------------------------------------
+This approach is called a hash function that takes a data item to be stored or retrieved and computes the first choice for n location for the item
+
+*You are given the number n, and you are going to compute the first choice location for it by using the function h(n) = n % 11
+ex: My data number is 132 and I need to store it in a spot. h(132) = 0, this is the first choice location for 132, so we
+are going to store it there. 
+*I am assuming we are doing the first choice thing because we need to see if that location is already taken, so say we did the previous
+example again but location 0 was taken, we might need to use some other function to find another location for it or a second choice or some
+other method to find the next best location to store the data.
+
+
+Floor and Ceiling
+The floor of a number, x, is the greatest integer less than or equal to x.
+The ceiling of a number, x, is the least integer greater than or equal to x.
+Example 1:
+floor(8.3) = 8
+ceiling(9.1) = 10
+floor(-8.7) = -9
+ceiling(-11.3) = -11
+ceiling(6) = 6
+ceiling(-8) = -8
+Example 2:
+Consider the function f(u) = 80 + 17 * ceiling(u - 1) where 0 <= u <= 13
+1.) if u = 3.7: f(3.7) = 80 + 17 * ceiling(2.7)
+    f(3.7) = 80 + 17 * (3) = 80 + 51 = 131
+2.) if u = 2: f(2) = 80 + 17 * ceiling(1) =  80 + 17*1 = 97
+3.) if u = 0: f(0) = 80 + 17 * ceiling(-1) = 80 + 17*(-1) = 80-17 = 63
+
+
+One-to-one and non-one-to-one function:
+Definition: A function is said to be "one-to-one" or "injective"
+If for each y member of Y, there is at most one x member of X with f(x) = y
+Example: The function f = {(1,b), (3,a), (2,c))}
+From set X = {1,2,3} and Y = {a,b,c} is one-to-one.
+1 ===========> b
+2 ===========> c
+3 ===========> a
+
+Example 2:
+The function f = {(1,a), (2,b), (3,a)}
+1 ============> a
+2 ============> b
+3 ============> a
+This IS a function. Function inputs can have the same output. BUT. This function is not one-to-one! Each input is not pointing to a unique in the range.
+Again, this function is not one to one since f(1) = a = f(3)
+
+
+Example 3:
+If X is the set of persons who have social security numbers and we assign each person x such that x is a member of the set X their
+own social security number, where the function is, SS(x) = ss #. We obtain a one to one function since each distinct person has
+a distinct SSN.
+
+Example 4: Consider the function f = {(1,b), (3,a), (2,c)}
+Where X = {1,2,3} and Y = {a,b,c,d}
+This function is one-to-one because each element in X has at most one element in Y.
+**Yes, a y in Y is not part of the function, that is ok. As long as every x in X is.
+
+This is also a great example of what the domain, co-domain, and range are again.
+The domain is all the x members in X. The co-domain is all the y members in Y
+and the range is all the y members such that the y members are members of the function.
+
+
+Example 5: Consider the function f = {(1,a), (2,b), (3,a)}
+Where X = {1,2,3} and Y = {a,b,c}
+Not one-to-one since the two elements in X have the same element in Y.
+
+One-to-one
+Definition: For a function f from X to Y is one-to-one and equivalent
+to: For all x1, x2 a member of X, if f(x1) == f(x2), then x1 = x2.
+(f(x1) = f(x2)) =====> (x1 = x2)
+
+Example: WE have to prove that the function f(n) = 2n+1 from the set of positive integers to the set of positive integers is one-to-one.
+We must show that for all positive integers n1 and n2 if f(n1) == f(n2)
+then n1 = n2.
+So, suppose that f(n1) = f(n2). Using the definition of f, we can say that
+2n+1 = 2n2 + 1
+2n1 = 2n2
+n1 = n2
+Therefore, f is one-to-one.
+
+Not one-to-one
+A function f from X to Y is not one-to-one and equivalent to:
+For all (x1,x2) members of X, if f(x1) = f(x2), then x1 does not equal x2
+(f(x1) = f(x2)) =====> (x1 does not = x2)
+
+Example: We have to prove that the function f(n) = 2^n - n^2 from the set of positive integers to the set of integers that is not one-to-one.
+We must provide integers n1 and n2, and n1 does not = n2, such that.
+f(n1) = f(n2)
+If n1 = 2, f(2) = 2^2 - 2^2 = 0
+If n2 = 4, f(4) = 2^4 - 4^2 = 0
+We find that, f(2) = f(4), but n1 does not = n2. 
+Therefore, f is not one-to-one.
+
+Onto:
+Definition: If f is a function from X to Y and the range of f is Y, f is said to be onto Y (or an onto function or a surjective function)
+So pretty much the range is everything in the co-domain to be onto...as well as be a function of course.
+Example 1: 
+Consider f = {(1,c), (2,a), (3,b)}
+Where X = {1,2,3} and Y = {a,b,c}
+This function is one-to-one and onto
+f is one-to-one because each element is X has at least on element in Y.
+f is onto because each element in Y has at least one element from X pointing to it.
+
+Example 2:
+f = {(1,a), (2,a), (3,b)}
+where X = {1,2,3} and Y = {a,b,c}
+This function is neither one-to-one or onto.
+f is not one-to-one because two elements (1 and 2) in X have the same element in Y (a)
+f is not onto Y because there is no arrow pointing to c.
+
+Definition again for onto: A function f from X to Y is onto and equivalent to:
+ For all y such that y is a member of Y, there exists x such that x is a member of X such that f(x) = y
+ Example: We have to prove that the function f(u) = 1/u^2 from the set X of non-zero real numbers to the set Y of the positive real numbers is onto Y.
+ We must show that for every y such that y is a member of Y, there exists a u such that u is a member of X such that f(u) = y
+ f(u) = y
+ 1/u^2 = y
+u = + or - 1/sqrt(y)
+
+Notice that 1/sqrt(y) is defined because y is a positive real number. If we take u to be the positive square root: u = 1/sqrt(y)
+Thus, for every y such that y is a member of Y, there exists u, namely u = 1/sqrt(y)
+such that f(u) = f(1/sqrt(u)) = 1/1/sqrt(y)^2 = y
+Therefore, f is onto Y.
+
+Definition again for not-onto:
+A function f from X to Y is not onto and equivalent to:
+For all y such that Y is a member of Y, there exists x such that x is a member of X such that f(x) does not equal y
+So...the function's range does not equal the co-domain...I think.
+Example 1: We have to prove that the function f(n) = 2n - 1
+from the set X of positive integers to the set Y of positive integers is not onto Y
+We must find an element m such that m is a member of Y such that for all n such that n is a member of X, f(n) does not = m
+Since f(n) is an odd integer for all n(f(n) = 2n-1), we may choose for y any positive, even integer, for example y = 2. Then y such that y is
+a member of Y and f(n) does not = y
+Therefore, f is not onto Y
+
+
+
+
+Bijections:
+A function f from X to Y that is both one-to-one and onto is called a bijection.
+Example 1: The function f = {(1,a), (2,c), (3,b)}
+From X = {1,2,3} and Y = {a,b,c}. This function is both one-to-one and onto from X to Y and f is called a bijection
+Example 2: If f is a bijection from a finite set X to a finite set Y, then |X| = |Y|,
+that is, the sets have the sets have the same cardinality and are the same size. For example:
+f = {(1,a), (2,b), (3,c), (4,d)}
+This function is bijection from X = {1,2,3,4} and Y = {a,b,c,d}. Both sets have four elements. In effect, f counts the elements in Y:
+This function is bijection from X = {1,2,3,4} and Y = {a,b,c,d}. Both sets have four elements. In effect, f counts the elements in Y:
+f(1) = a is the first element in Y
+f(2) = b is the second element in Y
+f(3) = c is the third element in Y
+f(4) = d is the fourth element in Y
+
+
+Inverse Function:
+Definition: A function f from X to Y is called inverse where f is one-to-one and onto, equivalent to: (x,y) such that
+(x,y) is a member of f, and denoted f^-1
+Example 1: Consider the function f = {(1,a), (2,c), (3,b)} where X = {1,2,3} and Y = {a,b,c}
+f^-1 = {(a,1), (c,2), (b,3)}
+** So were given a function as above, and this is saying just to give the function in its inverse form.
+Example 2: Consider the function f = {(1,b), (2,c), (3,a)} , where X = {1,2,3} and Y = {a,b,c}
+So, f^-1 = {(b,1), (c,2), (a,3)}
+The inverse is obtained by reversing all of the elements of Y and X.
+
+Composition of Functions:
+Definition: Let g be a function from X to Y and f be a function from Y to Z.
+The composition of f with g, denoted and f o g, is the function
+(f o g)(x) = f (g(x))
+from X to Z
+Example: Consider the function g = {(1,a), (2,a), (3,c)} from X = {1,2,3} and Y = {a,b,c}
+and f = {(a,y), (b,x), (c,z)} a function from Y to Z = {x,y,z}
+
+the function f o g = {(1,y), (2,y), (3,z)}
+
+
+1 ==========>  a _____________> x
+2 ==========/^ b/ \___________> y
+3 ==========>  c ============ > z
+
+X     g        Y                Z
+
+then
+
+1\__________
+            \  x
+2 ===========> y
+3 ===========> z
+X   f o g      Z
+
+
+EXERCISES ON FUNCTIONS:
+Exercise 1a: Find the element of each set, draw the graph and determine if the function is one-to-one, onto, or both. If it is
+one-to-one and onto, give the description of the inverse function as a set of ordered pairs, draw a graph and identify the element of each set.
+1. S = {(1,a),(2,a), (3,c), (4,b)}
+Where the domain X = {1,2,3,4} and the range Y = {a,b,c}
+1_____________              
+              \->a
+2-------------/
+                 b<----     
+3_______________       |
+                \-> c  |
+4----------------------
+*Fix this graph
+
+Well, not one to one because f(1) and f(2) both have a as the value.
+Onto, because each domain value is point to every y value in the range
+Cannot do the inverse of this function because it is not one-to-one AND onto.
+
+Exercise 1b:
+K = {(1,c), (2,d), (3,a), (4,b)}
+where the domain X = {1,2,3,4}
+and the range Y = {a,b,c,d}
+One-to-one and onto.
+Inverse:
+K^-1 = {(c,1), (d,2), (a,3), (b,4)}
+
+Exercise 1c:
+V = {(1,d), (2,d), (4,a)}
+where the domain X = {1,2,4} and the range Y = {a,d}
+Not one-to-one, 1 and 2 in X are both pointing to d in Y.
+It is onto though, every x value in the domain is point to at least one value in the range of Y
+
+Exercise 2:
+Determine whether each function is one-to-one, onto, or both. The domain and co-domain of each function is the set of all integers.
+1. f(n) = n+1
+X = {0,1,2,3,4...}: Domain
+Y = {0,1,2,3,4...}: Co-domain
+f(0) = 1
+f(1) = 2
+f(2) = 3
+f(3) = 4
+f(4) = 5
+The function is both one to one and onto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercise 4:
+Consider the function: g = {(1,b), (2,c), (3,a)} from X = {1,2,3} and Y = {a,b,c,d}
+and f = {(a,x), (b,x), (c,z), (d,w)} a function from Y to Z = {w,x,y,z}
+1. Determine f o g as a set of ordered pairs:
+f o g = {(1,x), (2,z), (3,x)}
+Exercise 5:
+Let f be the function from X = {0,1,2,3,4} to X defined by f(x) = 4x % 5
+1. Determine f as a set of ordered pairs. = f = {(0, 0), (1, 4), (2, 3), (3, 2), (4, 1)}
+One-to-one and onto
+
+
+0 ====>  0
+1 ====>  4
+2 ====>  3
+3 ====>  2
+4 ====>  1
+* Fix later
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

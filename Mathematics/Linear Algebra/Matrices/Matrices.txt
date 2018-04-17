@@ -1,0 +1,60 @@
+Introduction to Matrices:
+ex:
+
+| 5  1  2  |
+| 3  0  -5 |
+ 
+ = A.
+ This is a 2 x 3 matrix where 2 is the number of rows and 3 is the number of columns.
+ We can identify a certain element in the matrix with the notation: A[row][col] = value
+
+ ex: A[2][2] = 0;
+
+
+
+ Addition of Matrices:
+ Matrices can be added by adding each corresponding element per matrix:
+ So you can add A[0][0] + B[0][0] to get the result in a new matrix called C, where C[0][0] is the result of A[0][0] + B[0][0]
+
+ ex:
+ A = | 3 -1 |
+     | 2  0 |
+
+B = |-7  2  |
+    | 3   5 |
+
+
+C = A + B = | -4  1  |
+            |  5  5  |
+
+
+Subtraction of Matrices:
+A - B = A + (-B) = C
+
+ ex:
+ A = | 3 -1 |
+     | 2  0 |
+
+-B = | 7   -2 |
+     |-3   -5 |
+
+
+C = | 10  -3 |
+    | -1  -5 |
+
+
+
+
+Matrix Multiplication:
+***Add directions
+ex: 
+
+A =  | 3 -1 |
+     | 2  0 |
+
+B = |-7   2 |
+    | 3   5 |
+
+
+C = A * B = | (3*-7) + (1*3) = -18    (3*2) + (-1*5) = 1 |
+			| (3*2) + (-1*3) = 3      (2*2) + (0*5)  = 4 |

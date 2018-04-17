@@ -1,0 +1,171 @@
+What is an algorithm?
+An algorithm is simply a set of instructions to be followed to solve a problem.
+Once this algorithm is proved to be functional
+the next step is to see how much of resources it will require.
+Examples of resources are time and space.
+
+Mathematical definitions:
+Links:
+O, Omega, Theta, : https://www.youtube.com/watch?v=6Ol2JbwoJp0
+
+
+1. Big-O: T(N) = O(f(N))
+if there are positive constants c and n0 such that
+T(N) <= c*f(N) when N >= n0
+Links: https://www.youtube.com/watch?v=v4cd1O4zkGw
+     :
+AKA: How time scales with respect to some input variables:
+ex: pseudocode: boolean contains(array, x){
+				for each element in array
+					if element == x
+						return true
+This function walks through an array and see if it contains a particular value.
+This is described by O(N) where N is the size of the array.
+ex: public void addItemToArray(int newItem)
+{
+theArray[itemsInArray++] = newItem;
+}
+//This is an example of an order of one. O(1).
+//This is an algorithm that will execute in the same amount of time regardless of the amount of data.
+
+
+
+
+
+Looking at a video for Big-O, Omega, Theta:
+(youtube.com/watch?v=ei-A_wy5Yxw)
+Gives a nice explanation for each:
+
+Big-O:
+A function f(n) is O(g(n)) is there's a constant, c, and some initial value n0 such that f(n) =< c * g(n), so c*g(n) is the upper bound from some
+value n0 and onwward (for all n > n0)
+
+Example: f (n) = 4n^2 + 16n + 2
+Is f(n) => O(n^4)?
+We need to test this.
+Note: c must be + btw.
+You need to take the function f(n) and ask is this less than or equal to some constant, c * n^4
+4n^2 + 16n + 2 <= c * n^4
+Let's try the constant c = 1;
+=> 4n^2 + 16n + 2 <= 1 * n^4
+By constructing a table and starting with the n values 0,
+we can find where this is true.
+It turns out this starts being true for n = 4.
+So this is true for n0 =4 and c = 1.
+**You must come up with a constant and a particular value of n0
+** It does not matter that the first 4 values of n, 0-3 are false.
+This is why we specify where it is true with n0 and all numbers greater than n0  (n > n0).
+** If we could never find a constant and a particular starting value of n (n0),
+which all n > n0, ten the answer would be no, that this statement would not be true.
+
+Omega:
+A function f(n) is Omega(g(n)) if there exists a constant c and a particular value of of n, n0, for which f(n) >= c*g(n) for all n > n0.
+
+Example: f(n) = 4n^2 + 16n + 2
+Is f(n) => Omega(n^2)?
+Come up with a constant and a particular value of n (n0), for which from that point onward, this statement would be true. (n > n0).
+try:
+c = 1;
+n0 = 0;
+4n^2 + 16n + 2 >= n^2 * 1
+Yes, this will be always right from the value of n0 = 0;
+
+Example:
+f(n) = 4n^2 + 16n + 2
+Is f(n) => Omega(n^3)
+Is: 4n^2 + 16n + 2 >= n^3 ?
+Although this is true for the first few values,
+since n^3 > n^2, at some point n^3 will take over at some b0 and all n,
+making this a false statement.
+
+
+
+Theta:
+A function f(n) is Theta(g(n)) iff
+1.) f(n) is O(g(n))
+2.) f(n) is Omega(g(n))
+
+Example: f(n) =4n^2 + 16n + 2
+Is f(n) => Theta(g(n)) ?
+Let's start with 2.):
+Is f(n) => Omega(n^2) ?
+4n^2 + 16n + 2 >= c * n^2
+Choose: c = 1, n0 = 0;
+This is true.
+Moving on to 1.):
+Is f(n) -> O(n^2)
+4n^2 + 16n + 2 =< c * n^2
+This will be false for all c values =< 4.
+Need to pick a c value so that when n^2 becomes larger, the
+right side of the inequality will take over and be larger than the left side.
+try: 4n^2 + 16n + 2 <= 5n^2
+so c = 5:
+We eventually see this becomes true when n = 17, so n0 = 17 and is true for n0 > n.
+Since f(n) is O(g(n)) and f(n) is Omega (g(n)), f(n is Theta(g(n)))
+
+
+Translating for Computer Science:
+There are programs that have a running time function:
+Example: T(n) = 4n^2 + 16n + 2
+
+4n^2: For example the first part of code for i = 1 to n and j = 1 to n,
+this is a nested loop that takes n^2 times. Whatever it is doing in the loop, it takes 4 seconds each times you go
+to the body of the loop.
+
+16n: After the first part of the program is done,
+this second part goes through all inputs (for n inputs in an array),
+and each time it visits one node in the array,
+it does sometimes that takes 16 seconds to do (each time).
+
+2: ex: prints the answer (1 step) that takes a constant amount of time (2 seconds)
+
+
+
+
+Going back to the idea of bounds:
+Let's look at the equation we confirmed earlier:
+T(n) = 4n^2 + 16n + 2 is O(n^2),
+but it is ALSO O(n^3), O(n^4)... Any n>=2.
+BUT...when we want to describe what bounds of an algorithm is, we want to have the tightest bound we can. Out of all the possible,
+Big-O's there are, we want the lowest one there is. n^2 in this case is the tightest bound. 
+The same goes for Omega, I believe.
+
+Big-O with logarithms: ** Might need to make a review of logarithms.
+log base x of n => O(log base y of n); where x and y are different bases.; This will always be true.
+Example 1:
+x = y, c = 1, n0 = 0;
+f(n) = log base 2 of n => O(log base 2 of n)
+log base 2 of n <= log base 2 of n. Check.
+
+y > x:
+log base 2 of n is O (log base 8 of n)?
+log base 2 of n <= c * log base 8 of n
+c = log base 2 of 8 = 3;
+log base 2 of n <= 3 * log base 8 of n
+log base 2 of n <= log base 8 of n^3
+True in all cases.
+
+Sources: Weiss,Mark Allen. Data Structures and Algorithm Analysis, 4/e Pearson.  
+         Byrne, William. "Big Oh, Omega, Theta", "Big Oh Notation (and Omega and Theta)".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

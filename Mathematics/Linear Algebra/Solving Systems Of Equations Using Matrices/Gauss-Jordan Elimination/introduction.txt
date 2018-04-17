@@ -1,0 +1,182 @@
+The best way to use Gauss-Jordan elimination is to get your matrix to look like the equiuvalent identity matrix (excluding the rightmost results)
+This is done by simply getting a 1 in the appropriate place in the column you are working on and getting 0's in the remaining parts of the column.
+You start leftmost and work your way to the right.
+
+
+EXAMPLE 1: Solve this system of equations using Gauss-Jordan elimination:
+2x + 8y - 4z = 0
+2x + 11y + 5z = 9
+4x + 18y + 3z = 11
+
+[
+2  8  -4 | 0
+2  11  5 | 9
+4  18  3 | 11
+]
+*The numbers before the bar is the matrix you are working with while the numbers after it ar the righthand side equations that are affected from the row operations.
+Op. 1: Reduce all rows:
+-Going to divide row 1 by 2
+[
+1  4  -2 | 0
+2  11  5 | 9
+4  18  3 | 11
+]
+
+Op. 2: Row2 = Row2 - 2Row1
+(Work around the row you want to keep. Work around = get the other numbers in the column to be 0's and keep the row you are looking it the same
+because it has a 1 in it, which we want. In the end we want the identity matrix for a 3 x 3)
+[
+1  4  -2 | 0
+0  3  9  | 9
+4  18  3 | 11
+]
+Op. 3: Row3 = Row3 - 4Row1
+[
+1  4  -2 | 0
+0  3  9  | 9
+0  2  11 | 11
+]
+*We now have a completed first column for the identity matrix, which is good.
+We now moe to the next column where we want a 1 in the middle.
+Op. 4: Reduce row 2 by dividing by 3.
+[
+1  4  -2 | 0
+0  1  3  | 3
+0  2  11 | 11
+]
+*We now have a 1 where we want it. We now work on the numbers in the same column around the 1 to get them to be 0s.
+Op. 5: Row1 = Row1 - 4Row2
+*I've found it's great to use the row you want to keep the same to simply the other rows -- This might be an official thing/the only way, but through
+trial and error, I've found it to work.
+[
+1  0  -14 | -12
+0  1  3   | 3
+0  2  11  | 11
+]
+Op. 6: Row3 = Row3 - 2Row2
+[
+1  0  -14 | -12
+0  1  3   | 3
+0  0  5   | 5
+]
+Op. 7: Simplify row3
+[
+1  0  -14 | -12
+0  1  3   | 3
+0  0  1   | 1
+]
+*Column 2 looks great now as well. We got the 1 where we want it and the 0s where we want them in the same column.
+*Now use row 3 to simply the others since we have the 1 where we want it in row3 without modifying row3.
+Op. 8: Row1 = Row1 + 14Row3
+[
+1  0  0   | 2
+0  1  3   | 3
+0  0  1   | 1
+]
+Op. 9: Row2 = Row2 - 3Row3
+[
+1  0  0   | 2
+0  1  0   | 0
+0  0  1   | 1
+]
+*And we're done. So X = 2, Y = 0, and Z = 1.
+
+
+EXAMPLE 2: Solve this system of equations using Gauss-Jordan elimination:
+x1 + 3x2 + 2x3 + 5x4 = 11
+-x1 + 2x2 - 2x3 + 5x4 = -6
+2x1 + 6x2 + 4x3 + 7x4 = 19
+0x1 + 5x2 + 2x3 + 6x4 = 5
+[
+ 1  3  2  5  | 11
+-1  2 -2  5  | -6
+ 2  6  4  7  | 19
+ 0  5  2  6  | 5
+]
+Op. 1: Row2 = Row2 + Row1
+[
+ 1  3  2  5  | 11
+ 0  5  0  10 | 5
+ 2  6  4  7  | 19
+ 0  5  2  6  | 5
+]
+Op. 2: Simplify row2 by divding by 5
+[
+ 1  3  2  5  | 11
+ 0  1  0  2  | 1
+ 2  6  4  7  | 19
+ 0  5  2  6  | 5
+]
+Op. 3: Row3 = Row3 - 2Row1
+[
+ 1  3  2  5  | 11
+ 0  1  0  2  | 1
+ 0  0  0  -3  | -3
+ 0  5  2  6  | 5
+]
+Ops. 3 and 4: Simplify row3 by dividing by -3 and swap rows to get closer to the identity matrix format.
+[
+ 1  3  2  5  | 11
+ 0  1  0  2  | 1
+ 0  5  2  6  | 5
+ 0  0  0  1  | 1
+]
+*Column 1 is looking good.
+*Column 2 has a 1 where we want it and need to get the other numbers in the column to be a 0 if they are already are not so.
+Op. 5: Row3 = Row3 - 5Row2
+[
+ 1  3  2  5  | 11
+ 0  1  0  2  | 1
+ 0  0  2  -4 | 0
+ 0  0  0  1  | 1
+]
+Op. 6: Simplify Row 3 by divind by 2 to get a 1 where we want it
+[
+ 1  3  2  5  | 11
+ 0  1  0  2  | 1
+ 0  0  1  -2 | 0
+ 0  0  0  1  | 1
+]
+Op. 7: Row1 = Row1 - 3Row2
+[
+ 1  0  2  -1  | 8
+ 0  1  0  2  | 1
+ 0  0  1  -2 | 0
+ 0  0  0  1  | 1
+]
+*Column 2 is now also looking good.
+*Column 3 has a 1 where we want it but again as the others, need to get rid of the remaining numbers in the column and get
+them to be zeros.
+Op. 8: Row1 = Row1 - 2Row3
+[
+ 1  0  0  3 | 8
+ 0  1  0  2  | 1
+ 0  0  1  -2 | 0
+ 0  0  0  1  | 1
+]
+*Column 3 is looking good now too.
+*Column 4 has a 1 where we want it.
+*Use row 4 to get rid of the othe numbers in the column.
+**As a general rule, possibly, use the row where your pivot 1 is to get 0s in the remaining rows in the pivot number's column.
+Op. 9: Row3 = Row3 + 2Row4
+[
+ 1  0  0  3 | 8
+ 0  1  0  2  | 1
+ 0  0  1  0  | 2
+ 0  0  0  1  | 1
+]
+Op. 10: Row2 = Row2 - 2Row4
+[
+ 1  0  0  3  | 8
+ 0  1  0  0  | -1
+ 0  0  1  0  | 2
+ 0  0  0  1  | 1
+]
+Op. 11: Row1 = Row1 - 3Row4
+[
+ 1  0  0  0  | 5
+ 0  1  0  0  | -1
+ 0  0  1  0  | 2
+ 0  0  0  1  | 1
+]
+**Answer: x1 = 5, x2 = -1, x3 = 2, x4 = 1

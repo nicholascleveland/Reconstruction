@@ -1,0 +1,117 @@
+From video:
+Induction Proofs:
+
+Great Steps from Professor Rob Bob:
+1. Show S1 is true
+2. Assume Sk is true.
+3. Force substitution in "k+1" everywhere there is a "k" to set up your Sk+1 equation. The right side of this equation will need to be what the
+last line of your proof looks like.
+4. Start the next part of your proof by rewriting the Sk equation.
+5. Add the Sk+1 term to both sides of the equation.
+6. When you simplify the right side to equal the right side of the equation you set up in step 3 ... you are done.
+
+
+Example 1:
+Prove 6+12+18+24+...+6n = 3n(n+1)
+My Attempt:
+1. S1 = 6 = 3(1)(1+1) = 6, check.
+(6 is the first element, hence S1, and we can verify if this equation is true if we plug 1 in on the right side, 6 = 6)
+2. Sk =  6+12+18+24+...+6k = 3k(k+1)
+3. Sk+1 = 6+12+18+24+...+6(k+1) = 3(k+1)((k+1)+1) = 3(k+1)(k+2) = (3k+3)(k+2) = 3k^2 + 3k + 6k + 6 = 3k^2 + 9k + 6
+4. Sk =  6+12+18+24+...+6k = 3k(k+1)
+5. 6+12+18+24+...+6k + 6(k+1) = 3k(k+1) + 6(k+1)
+6. (3k+6)(k+1) = 3k^2 + 6k + 3k + 6 = 3k^2 + 9k + 6. This is the same as the right side of 3. Check.
+
+Example 2:
+2+6+2x3^2+...+2x3^n-1 = (3^n)-1
+1. 2 ?= (3^1) -1 = 2. Check.
+2. 2+6+2x3^2+...+2x3^k-1 = (3^k)-1
+3. 2+6+2x3^2+...+2x3^((k+1)-1) = (3^(k+1))-1
+4. 2+6+2x3^2+...+2x3^k-1 = (3^k)-1
+5. 2+6+2x3^2+...+2x3^k-1  + 2x3^((k+1)-1) = (3^k)-1 + 2x3^((k+1)-1)
+6. (3^k)-1 + 2x3^k = 3^k + 2x3^k - 1 = 3^k(1+2) - 1 = 3^k(3) - 1 = 3^k(3^1) - 1 = 3^(k+1) - 1. Check.
+
+Example 3:
+Sigma, i=1 to n of 2/i(i+1) = 2n/n+1
+1. At n=1, plug in i=1 to left side: 2/1(1+1) = 1 and right side, since n=1: 2(1)/1+1 = 1. Check. For the left side. When we get the first term, we plug in i=1. This is S1.
+2. Sigma, i=1 to k of 2/i(i+1) = 2k/k+1
+2.5 1 + ... + 2/k(k+1) = 2k/k+1
+3. 1+...+ 2/(k+1)((k+1)+1) = 2(k+1)/((k+1)+1)
+=> 1+...+ 2/(k+1)(k+2) = 2(k+1)/(k+2)
+4. 1 + ... + 2/k(k+1) = 2k/k+1
+5. 1 + ... + 2/k(k+1) + 2/(k+1)(k+2) = 2k/k+1 + 2/(k+1)(k+2)
+6. 2k/k+1 + 2/(k+1)(k+2) = 2k(k+2)/(k+1)(k+2) + 2/(k+1)(k+2) = 2k(k+2) + 2 / (k+1)(k+2) = 2k^2 + 4k + 2 / (k+1)(k+2) = 2(k^2 + 2k + 1) / (k+1)(k+2) = 2(k+1)(k+1) / (k+1)(k+2)
+ = 2(k+1) / (k+2)
+ 
+ 
+ 
+ Other Exercises:
+ 1a.) 1+3+5+...+(2n-1)=n^2
+ 1. 1 = 1^2. Check.
+ 2. 1+3+5+...+(2k-1) = k^2
+ 3. 1+3+5+...(2k+1) = (k+1)^2
+ 4. 1+3+5+...+(2k-1) = k^2
+ 5.  1+3+5+...+(2k-1) + (2k+1) = k^2 + (2k+1)
+ 6. k^2 +2k + 1 = (k+1)(k+1) = (k+1)^2. Check.
+ 
+ 1b.) 1^2 + 2^2 + 3^2 +...+ n^2 = n(n+1)(2n+1)/6
+ 1. 1^2 = 1(1+1)(2(1)+1)/6 = 6/6 = 1. Check.
+ 2. 1^2 + 2^2 + 3^2 +...+ k^2 = k(k+1)(2k+1)/6
+ 3. 1^2 + 2^2 + 3^2 +...+ (k+1)^2 = (k+1)((k+1)+1)(2(k+1)+1)/6  = (k+1)(k+2)(2k+3)/6
+ 4. 1^2 + 2^2 + 3^2 +...+ k^2 = k(k+1)(2k+1)/6
+ 5. 1^2 + 2^2 + 3^2 +...+ k^2 + (k+1)^2 = k(k+1)(2k+1)/6 + (k+1)^2
+ 6. k(k+1)(2k+1)/6 + 6(k+1)^2/6 = (k(k+1)(2k+1) + 6(k+1)^2)/6 = ((k+1)(k(2k+1) + 6(k+1)))/6 = ((k+1)(2k^2+ 7k +6 ))/6 = ((k+1)(2k^2+ 7k +6 ))/6 = ((k+1)(k+2)(2k+3))/6. Check.
+ 
+ 2.)
+ 1/2n less than or equal to  1*3*5*...*(2n-1)/2*4*6*...*(2n) for n greater than or equal to 1
+ 1/2n <= 1*3*5*...*(2n-1)/2*4*6*...*(2n)
+ 1.) 1/2(1) <= 1/2. Check.
+ 2.) 1/2k <= 1*3*5*...*(2k-1)/2*4*6*...*(2k)
+ 3.) 1/2(k+1) <= 1*3*5*...*(2(k+1)-1)/2*4*6*...*(2(k+1))
+ 3.) 1/(2k+2) <= 1*3*5*...*(2k+1)/2*4*6*...*(2k+2))
+ 4.) 1/2k * (2k+1)/(2k+2) <= 1*3*5*...*(2k-1) * (2k+1)/2*4*6*...*(2k) * (2k+2)
+ 5.) 1/2k * (2k+1)/(2k+2) = 1/(2k+2) * (2k+1)/2k = 1/2(k+1) * (2k+1)/2k which is greater than or equal to 3.)
+ 
+ 
+ 3.) Use the geometric sum to prove that: r^0 + r^1 +...+r^n = (r^(n+1) -1)/ (r-1)
+ For all n >= 0 and 0 <= r <= 1
+ 1. Starting at base case n-0 here.
+ r^0 ?= (r^(0+1)-1)/r-1 = r-1/r-1 = 1. Check.
+ 2. r^0 + r^1 +...+r^k = (r^(k+1) -1)/ (r-1)
+ 3. r^0 + r^1 +...+r^(k+1) = (r^((k+1)+1) -1)/ (r-1)
+ 3. r^0 + r^1 +...+r^(k+1) = (r^(k+2) -1)/ (r-1)
+ 4. r^0 + r^1 +...+r^k + r^(k+1) = (r^(k+1) -1)/ (r-1) + (r^k+1)
+ 5.(r^(k+1) -1)/ (r-1) + (r^(k+1))(r-1)/(r-1)
+   ((r^(k+1)) - 1 + (r^(k+1))(r-1))/(r-1)
+   ((r^(k+1)) - 1 + (r^(k+2)) - r^(k+1)/(r-1)
+   ((r^(k+2)) - 1)/(r-1). Check.
+   
+   
+4a.) Prove 7^(n) - 1 is divisible by 6 for all n >= 1
+1. Base: n = 1:  7^(1) - 1 / 6 = 6/6 = 1; 6 is evenly divisible by 6; 6 % 6 = 0
+2. 7^(k) - 1 / 6
+3. 7^(k+1) - 1  = (7*7^(k) - 1) = (1*7^k) + (6*7^k) - 1 = (1*7^k) - 1 + (6*7^k)
+We know from 1, that (1*7^k) - 1 is divisible by 6 and we also see (6*7^k) is divisible by 6.
+So this whole sum is divisible by 6.
+
+
+4b.) Prove 11^(n)  - 6 is divisible by 5 for all n >= 1
+1. Base case: 11^ (1) - 6 = 5, which is divisible by 5. Check.
+2.  11^(k)  - 6
+3.  11^(k+1)  - 6 = (11*11^k) - 6 = (1*11k) + (10*11k) - 6 = (1*11^k) - 6 + (10*11^k)
+We know (1*11^k) - 6 is divisible by 5, proven in the base case and  we see (10*11^k) is divisible by 5 as well.
+So this whole sum is divisible by 5. Check.
+ 
+Sources: Johnsonbaugh, Richard. Discrete Mathematics, 7/e Pearson. Kindle Edition. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+

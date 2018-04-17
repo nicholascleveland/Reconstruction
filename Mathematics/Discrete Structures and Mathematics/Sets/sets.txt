@@ -1,0 +1,192 @@
+Reconstructed:
+Idea 1: The intro
+The concept of a set is basic to all of mathematics and mathemaitcal applications.
+A set is a collection of objects or elements/members.
+For example (Example 1)
+Let A be a set:
+A = {1,2,3,4}
+A is the name of the set and 1,2,3,4 are the elements/members of the set.
+If I were to add ",..." after the 4th element so, it would look like: A = {1,2,3,4,...}
+This would be an "infinite set". This means the set does not have any limit or finite length of elements.
+
+Example 2: 
+B = {x | x is a positive, even integer}
+We are listing the property of the element(s), x, here.
+"B = the set of all x such that x is a positive, even integer"
+
+Sets are nothing new to us. I'll put a link here to some common sets we have seen from previous mathematics. May we didn't even know they were called "sets".
+https://en.wikipedia.org/wiki/Set_notation
+We see "N" for natural numbers, "Z" for integers, etc.
+Click the hyper links to see the actual elements of each set.
+
+Idea 2: The Cardinality
+If we have a set called X, and it is a finite set,
+we can get the number of elements of set X,
+where | X | = the number of elements.
+Example: So if we have a set of 5 elements called X.
+(X = {1,2,3,4,5}), then | X | = 5.
+This is called the Cardinality of set X
+Example: How about the cardinality of an infinite set? Such as the natural numbers, N?
+The cardinality of this set would simply just be infinite.
+
+Idea 3: Member notation
+If we have a set, X, and call a member x,
+Then x belongs to X. We can write this as x ϵ X
+Which translates to X = {x}
+
+If we have an element,x, that is NOT a member of X,
+then we can denote it as x\notin X (epsilon with slash through it)
+
+
+If we have a set, X, with no element(s) in it, we denote it
+as Ø.
+
+If we have a set X and a set Y that are "equal", we say X = Y
+
+
+Examples:
+Equal Sets: Let X = {1,4,2} and Y = {2,2,1,4}
+Although these sets may be in different orders and have different amounts of the same elements, they still consist of the same elements, 
+which makes them equivalent.
+CHECK*** Equation:
+A = {X | x^2 + x - 6 = 0} and B = {2,-3}
+A = B here, since if we were to plug in B's elements into the equation in X, we would get a true statement...
+
+Non-equal Sets: X = {1,3,4} and Y = {4,5,7}
+X does not equal Y, since there is at least on element in X that is not in Y.
+
+Idea 4: Subsets
+Let's say we have 2 sets, X and Y. If every element of X is in Y, then we can say X is s subset of Y.
+Example: X = {1,2} and Y = {1,2,3}
+Notation:X c Y
+Example: X = {x | 3x^2 + x - 2 = 0}
+Aka if x is an element of X, then 3x^2 + x - 2 = 0.
+Solving for x, you obtain x = -1 and x = 2/3.
+therefore you have x is an element of X,'
+but if you were to compare it to something like the Z (integers) set,
+then x is not an element of Z. Therefore X (the set) is not a subset of Z.
+
+Any set is a set of itself, since a set shares the same elements with itself.
+The empty set is a subset of every set.
+
+If we have a set X that is a subset of Y but does not equal Y,
+then X is called a proper subset of Y.
+Example: X = {3,4} and Y = {1,2,3,4}
+
+Powerset: This is the set of all subsets (proper or not proper) of a set.
+Given a set, X, the power set of Xi s denoted P(X).
+Let |X| = n. Then |P(X)| = 2^n.
+Example: Let X = {a,b,c}
+P(X) = {empty_set, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}}
+From the details above, we were told an empty set is always a subset of a set and that a set is a subset of itself.
+
+
+
+Idea 5: Operations:
+Union: A U B = {x | x element of A or x element of B}
+Intersection: A n B = {x element of A and x element of B}
+Difference/Relative Complement: A - B = {x | x element of A or x not element of B}
+Disjoint: If A n B = empty set
+
+Examples: 
+1. If A = {1,3,5} and B = {4,5,6}
+then:
+A U B = {1,3,4,5,6}
+A n B = {5} -- this example is a set with one element btw
+A - B = {1,3} -- remove elements that are in A that are in B.
+VS.
+B - A= {4,6} -- remove elements that are in B that are in A
+NOTE: In general, A-B does not equal B-A
+
+Idea 6: Complements
+Let U be the universal set and X be the subset of U, the set U-X is called the complement of X, denoted by X-bar(X with a bar on top of it)
+Example: Let A = {1,3,5}. Let the universal set be U = {1,2,3,4,5}. Then U-A = A-bar= {2,4}
+Example: Let A = {1,3,5}. Let the universal set, U = {1,3,5,7,9}. Then A-bar = {7,9}
+
+
+Some laws:
+D:\Development\Programming Projects\Fundamentals\Reconstruction\Discrete Structures\Sets\images\properties.png 
+(local to D:)
+
+Idea 7: Partition:
+A partition of a set X is every element in X belongs to exactly one member of S of sets.
+X is a set
+S is a set of sets
+X = {1,2,3,4,5,6,7,8}
+S = {{1,4,5}, {2,6}, {3}, {7,8}}
+S is a partition of X
+
+Idea 8: Cartesian Product
+Given sets X and Y, and X x(times/cross) Y the set of all ordered pairs (x,y) where x is a member of X and y is a member of Y.
+X x Y is the Cartesian Product of X and Y.
+Let set X = {1,2,3} and set Y = {a,b}
+X x Y  = {(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)}
+Also, |X x Y| = |X| x |Y|
+X x Y does not equal Y x X
+
+
+The Cartesian Product of a set
+R^3 = R x R x R
+where R = {[-inf,+inf]}
+
+HOMEWORK 1:
+
+Exercise 1: Let the universe be the set U ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}.
+Let A = {1, 4, 7, 10}, B = {1, 2, 3, 4, 5} and C = {2, 4, 6, 8}.
+List the elements of each set
+
+– A U B = {1,2,3,4,5,7,10}
+– B n C = {2,4}
+– A – B = {7,10}
+– B – A = {2,3,5}
+– Ā = U-A = {2,3,5,6,8,9}
+– U – C = {1,3,5,7,9,10}
+– Ū = U-U = empty set
+– A U empty set = A
+– B n empty set = empty set
+– A U U = U
+– B n U = B
+– A n (B U C) = part 1: Let X = (B U C) = {1,2,3,4,5,6,8}then A n X = {1,4}
+– complementB n (C − A)  = part1: Let X = (C-A) = {2,6,8}, Let Y = cB = U-B = {6,7,8,9,10}, then Y n X = {6,8}
+– (A ⋂ B) − C = part1: Let X = (A n B) = {1,4}, then X - C = {1}
+– complement(A n B) U C = part1: Let X = (A n B) = {1,4}, then cX = U-X = {2,3,5,6,7,8,9,10}, then cX U C = {2,3,4,5,6,7,8,9,10}
+– (A U B) – (C – B)  = part1: Let X = (A U B) = {1,2,3,4,5,7,10}, let Y = (C-B) = {6,8}, then Z = X-Y = {X}
+
+Exercise 2: Determinate A c incl B
+ A = {1, 2} and B = {3, 2, 1}; yes
+ A = {1, 2} and B = {x| x^3- 6x^2 +11x=6}
+ => x^3 - 6x^2 +11x - 6 = 0 =>
+ (x^3 - 3x^2) - (3x^2 + 11x -6) = 0
+ x^2(x - 3) - (3x^2 - 11x + 6)= 0
+ x^2(x - 3) - (3x^2 - 9x) - (2x + 6) = 0
+ x^2(x - 3) - (3x(x - 3) - 2(x - 3)) = 0
+ x^2(x - 3) - (x - 3)(3x - 2) = 0
+(x - 3)(x^2 - 3x + 2) = 0
+(x - 3)(x(x - 2) - 1(x - 2)) = 0
+(x - 3)(x - 2)(x - 1) = 0
+Roots are 3,2,1 => B = {3,2,1}
+A is a subset of B. B has all of the elements that A has and more.
+
+ 
+ 
+
+Exercise 3: Show that A is not a subset of B.
+ 1. A = {1, 2, 3} and B = {1, 2}
+ 2. A = {1, 2, 3} and B = es
+ 1. A has more elements than B, so it cannot be a subset of B
+ 2. A has elements and is not an empty set, so it cannot be a subset of an empty set. 
+
+Exercise 4: Let X = {1, 2} and Y = {a, b, c}. List the element of each seat.
+ X × Y = {(1,a),(1,b),(1,c),(2,a),(2,b),(2,c)}
+ X × X  = {(1,),(1,2),(2,1),(2,2)}
+
+
+Sources: Johnsonbaugh, Richard. Discrete Mathematics, 7/e Pearson. Kindle Edition. 
+
+
+
+
+
+
+
+
